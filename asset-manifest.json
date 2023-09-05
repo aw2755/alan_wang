@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/alan_wang/static/css/main.073c9b0a.css",
+    "main.js": "/alan_wang/static/js/main.5805752f.js",
+    "static/js/787.28cb0dcd.chunk.js": "/alan_wang/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "/alan_wang/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/alan_wang/index.html",
+    "main.073c9b0a.css.map": "/alan_wang/static/css/main.073c9b0a.css.map",
+    "main.5805752f.js.map": "/alan_wang/static/js/main.5805752f.js.map",
+    "787.28cb0dcd.chunk.js.map": "/alan_wang/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5805752f.js"
+  ]
+}
