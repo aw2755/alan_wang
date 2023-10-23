@@ -54,6 +54,8 @@ process including Junit, Maven, Object Oriented Design, and Design Documentation
           
         {/* PROJECTS */}
         <h2 id="projects" class="section">PROJECTS</h2>
+
+          {/* */}
           <div>
               <ul class = "description-list">
                   <li></li>
