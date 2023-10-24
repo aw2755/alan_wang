@@ -1,17 +1,50 @@
 html {
+  margin-top: 20px;
+  background-color: #333333;
   scroll-behavior: smooth;
+  color: #E4F1FF
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #b7b7b7;
+  position: fixed;
+  margin-bottom: 65px; 
+  top: 0px; 
+  width: 100%; 
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #333333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #E4F1FF;
+  color: #333333;
 }
 
 .name {
   animation:
     typing 1s steps(20, end) forwards infinite alternate,
     blink-caret .75s step-end infinite;
-  border-right: .1em solid #b393d3;
-  color: #b393d3;
+  border-right: .1em solid #AEFFDE;
+  color: #AEFFDE;
   letter-spacing: .15em;
-  margin-right: 0 auto;
   overflow: hidden;
-  padding-left: 40%;
+  padding-left: 43%;
   white-space: nowrap;
 }
 
@@ -24,11 +57,19 @@ html {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #b393d3; }
+  50% { border-color: #AEFFDE; }
+}
+
+.block {
+  border: 5px solid #E4F1FF;
+  border-radius: 50px;
+  margin: 20%;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .section {
-  display: inline-flex;
+  text-align: center;
   flex-direction: row;
   margin-bottom: 0px;
 }
@@ -37,6 +78,8 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
   justify-content: space-between;
   margin-bottom: 0px;
   margin-left: 50px;
@@ -47,6 +90,9 @@ html {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-style: italic;
   margin-bottom: 0px;
   margin-left: 50px;
   margin-top: 0px;
