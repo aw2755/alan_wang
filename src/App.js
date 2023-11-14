@@ -10,11 +10,11 @@ function App() {
 
   return (
     <div>
-        <div class="navbar">
-            <div><a href="#top">Top</a></div>
-            <div><a href="#experience">Experience</a></div>
-            <div><a href="#projects">Projects</a></div>
-        </div>
+        <ul class="navbar">
+            <li><a href="#top">Top</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
 
         {/* NAME */}
         <header>
