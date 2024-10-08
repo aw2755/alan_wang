@@ -273,15 +273,6 @@ body.modal-open {
   }
 }
 
-.project-main {
-  display: flex;
-  flex-direction: row;
-  border-radius: 12px;
-  border-style: double;
-  border-color: #333;
-  height: 500px;
-}
-
 .contact-main {
   display: flex;
   flex-direction: row;
@@ -394,6 +385,37 @@ body.modal-open {
   .social-links p {
     display: none;
   }
+}
+
+.project-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  border-style: groove;
+  border-color: #fcb69f;
+  max-height: 450px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background: linear-gradient(62deg, #ffecd2, #fcb69f);
+}
+
+.project-main div {
+  border-radius: 12px;
+  border-style: inset;
+  border-color: #fcb69f;
+  margin: 15px;
+  width: 250px;
+  height: 350px;
+  background: radial-gradient(#F7CE68, #FBAB7E);
+}
+
+.project-heading {
+  font-family: Pirata One, sans-serif;
+  font-size: 30px;
+  text-wrap: wrap;
+  text-decoration: underline;
+  margin-top: 5px;
+  text-align: center;
 }
 
 .primary-c {

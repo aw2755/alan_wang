@@ -235,7 +235,21 @@ function App() {
                     <h5 className='heading-4 sec-color'>My Projects —</h5>
                 </section>
                 <div className='project-main mt-s mr-s'>
-                    <p>BLANK FOR NOW</p>
+                    <div>
+                        <h5 className='project-heading upper-c'>Portfolio</h5>
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
                 </div>
             </div> {/* end project div*/}
 
