@@ -8,7 +8,7 @@ import RIT_TIGER from './images/RIT-tiger.jpg';
 import LINKEDIN_LOGO from './images/linkedin-logo.png';
 import GITHUB_LOGO from './images/github-logo.png'
 import INSTAGRAM_LOGO from './images/instagram-logo.png'
-import SPOTIFY_LOGO from './images/spotify-logo.png'
+import EMAIL_LOGO from './images/email-logo.png'
 
 function App() {
     // function to open resume and popup window
@@ -168,21 +168,17 @@ function App() {
                 
             </div> {/* end nav-container */}
 
-            <div className='left'>
+            <div className='home-resize left mr-s'>
                 <div>
-                    <div className='intro ml-s'>
+                    <div className='intro'>
                         <h5 className='heading-5'>hello there👋, i’m</h5>
-                        <div className='name-container'>
-                            <span>Alan Wang</span>
-                        </div>
+                        <h1 className='main-name'>Alan Wang</h1>
                         <h4 className='heading-4 font-s primary-c mt-s mb-s'>full-stack developer</h4>
-                        <p className='paragraph font-s mt-s mb-ss'>Python • Java • C++</p>
-                        <p className='paragraph font-s mb-ss'>Brooklyn, New York 🌍🗽 <i> Open to Relocation</i></p>
                     </div> 
 
                     {/* view resume button */}
                     <div>
-                        <button className="resume-button ml-s mt-s" onClick={openResume}>View Resume</button>
+                        <button className="resume-button mt-s" onClick={openResume}>View Resume</button>
                             <div id='overlay'></div>
                             <div id="resumePopup" className="popup">
                                 <span className="close" onClick={closeResume}>&times;</span>
@@ -197,71 +193,105 @@ function App() {
             <div className='right'></div> 
 
 
-            <div id='about' className='mt-ll ml-s mb-l'> {/* start about div */}
+            <div id='about' className='about-resize mt-ll mb-l mr-s ml-s'> {/* start about div */}
                 <h5 className='heading-4 sec-color mb-s mt-s'>About Me —</h5>
 
                 <div className='about-me'> {/* start about paragraph div */}
-                    <div className='about-me-p mr-ss'>
+                    <div className='about-me-p'>
                         <p>
-                            <br/> Hey there! 👋 I’m Alan Wang, a student at Rochester Institute of Technology and 
-                            a passionate full-stack developer with a love for creating seamless digital experiences. 
-                            Whether it's coding the backend logic in Python, C++, or crafting smooth front-end designs
-                            with JavaScript and CSS, I thrive on building things that make people's lives easier. 
+                            <br/> Hey there! 👋 I’m Alan Wang, a student at Rochester Institute of Technology. 
+                                  I’m a passionate full-stack developer with a strong focus on backend development. 
+                                  I thrive on building efficient, seamless web applications and enjoy crafting robust 
+                                  backend functionalities that power smooth user experiences.
                         </p>
                         <p>
                             <br/> Based in Brooklyn, New York, I’m always looking for new challenges that push
-                            the boundaries of technology. My journey into software development started with a
-                            simple love for problem-solving, and it’s led me to explore the fascinating world of 
-                            full-stack development. From designing responsive interfaces to building robust 
-                            systems that handle complex data, I’m all about creating solutions that work flawlessly. <br/>
+                                  the boundaries of technology. My journey into software development started with a
+                                  simple love for problem-solving, and it’s led me to explore the fascinating world of 
+                                  full-stack development. <br/>
                         </p>
                         <p>
-                            <br/> Outside of tech, I’m a fierce badminton enthusiast 🏸. Whenever I’m not coding, 
-                            you’ll likely find me on the court.
+                            <br/> Outside of tech, I am a badminton enthusiast 🏸. Whenever I’m not coding, 
+                                  you’ll likely find me on the court. I also value spending time with friends, 
+                                  being surrounded by people I care about is something I’ll always cherish. <br/>
+                        </p>
+
+                        <p>
+                            <br/> I’m always eager to learn and adapt to new technologies, continuously refining 
+                                  my skills to stay at the forefront of web development.
                         </p>
                     </div> {/* end about paragraph div */}
 
                     {/* RIT logo */}
-                    <div className='about-img mr-s'>
+                    <div className='about-img'>
                         <img src={RIT_TIGER} alt='' height={'300px'}></img>
                     </div>
 
-                </div> {/* end about div */}
+                </div> {/* end about me div */}
 
-                
             </div>
-            <div id='project' className='mt-s ml-s'> {/* start project div*/}
+            <div id='project' className='project-resize mt-s sec-color mr-s ml-s'> {/* start project div*/}
                 <section>
                     <h5 className='heading-4 sec-color'>My Projects —</h5>
                 </section>
-                <div className='project-main mt-s mr-s'>
-                    <div>
-                        <h5 className='project-heading upper-c'>Portfolio</h5>
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
+
+                <div className='project-main mt-l main-font'>
+
+                    <a href='https://github.com/aw2755/alan_wang' target='_blank' rel="noreferrer" className='project-link'>
+                        <div className='project-container'>
+                            <h5 className='upper-c'>Portfolio</h5>
+                            <p>This personal portfolio showcases the projects I’ve completed, highlighting my skills and 
+                                creativity across various development areas. It offers an in-depth look into the work 
+                                I’m passionate about and the tools I’ve used to create them.</p>
+                            <section class='tech-used'>
+                                <span className='tech-tag'>REACT.JS</span>
+                                <span className='tech-tag'>CSS</span>
+                            </section>
+                        </div>
+                    </a>
+
+                    <a href='x' target='_blank' rel="noreferrer" className='project-link'>
+                        <div className='project-container'>
+                            <h5 className='upper-c'>x</h5>
+                            <p></p>
+                            <section class='tech-used'>
+                                <span className='tech-tag'></span>
+                            </section>
+                        </div>
+                    </a>
+
+                    <a href='x' target='_blank' rel="noreferrer" className='project-link'>
+                        <div className='project-container'>
+                            <h5 className='upper-c'>x</h5>
+                            <p></p>
+                            <section class='tech-used'>
+                                <span className='tech-tag'></span>
+                            </section>
+                        </div>
+                    </a>
+
+                    <a href='x' target='_blank' rel="noreferrer" className='project-link'>
+                        <div className='project-container'>
+                            <h5 className='upper-c'>x</h5>
+                            <p></p>
+                            <section class='tech-used'>
+                                <span className='tech-tag'></span>
+                            </section>
+                        </div>
+                    </a>
+
                 </div>
             </div> {/* end project div*/}
 
 
-            <div id='contact' className='mt-s ml-s mb-l'> {/* start contact div*/}
+            <div id='contact' className='contact-resize mt-s mb-l mr-s ml-s'> {/* start contact div*/}
                 {/* contact section */}
                 <section>
                     <h5 className='heading-4 sec-color'>Contact Me —</h5>
                 </section>
 
-                <div className='contact-main mt-s mr-s'> {/* start contact form div*/}
-                    <form className='contact-form ml-ss mt-l mb-s main-font' onSubmit={handleSubmit}>
+                <div className='contact-main mt-s'> {/* start contact form div*/}
+                    <form className='contact-form mr-s mt-l mb-s main-font' onSubmit={handleSubmit}>
                         {/* name contact */}
                         <div>
                             <label className='upper-c' htmlFor='name'>Name: </label>
@@ -293,7 +323,7 @@ function App() {
                             <a href='https://www.linkedin.com/in/wang-alan/' target="_blank" rel="noopener noreferrer">
                                 <img src={LINKEDIN_LOGO} alt='LinkedIn'></img>
                             </a>
-                            <p>— LinkedIn —</p>
+                            <p>LinkedIn</p>
                         </div>
                         
                         {/* github */}
@@ -301,7 +331,7 @@ function App() {
                             <a href='https://github.com/aw2755/' target="_blank" rel="noopener noreferrer">
                                 <img src={GITHUB_LOGO} alt='Github'></img>
                             </a>
-                            <p>— Github —</p>
+                            <p>Github</p>
                         </div>
 
                         {/* instagram */}
@@ -309,15 +339,15 @@ function App() {
                             <a href='https://www.instagram.com/alano.o/' target="_blank" rel="noopener noreferrer">
                                 <img src={INSTAGRAM_LOGO} alt='Instagram'></img>
                             </a>
-                            <p>— Instagram —</p>
+                            <p>Instagram</p>
                         </div>
 
                         {/* spotify */}
                         <div>
-                            <a href='https://open.spotify.com/user/alanwang07012002' target="_blank" rel="noopener noreferrer">
-                                <img src={SPOTIFY_LOGO} alt='Spotify'></img>
+                            <a href='mailto:alanwang07012002@gmail.com' target="_blank" rel="noopener noreferrer">
+                                <img src={EMAIL_LOGO} alt='Spotify'></img>
                             </a>
-                            <p>— Spotify —</p>
+                            <p>Email</p>
                         </div>
 
                     </div> {/* end socials div */}
@@ -332,7 +362,13 @@ function App() {
                             </div>
                         </div>
                     )}
+
             </div> {/* end contact div */}
+
+            <footer class="footer">
+                <p> PORTFOLIO BY - Alan Wang</p>
+            </footer>
+
         </div> // end div for app 
   ); // end return
 } // end function App()

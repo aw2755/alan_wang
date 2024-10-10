@@ -11,49 +11,62 @@ html {
 .page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-.home {
-  background: none; 
-  background-color: transparent; 
+/* Scale down the project section once the screen width is below 800px */
+@media (max-width: 800px) {
+  .home-resize, .about-resize, .contact-resize, .project-resize {
+    transform: scale(0.9); /* Scale down to 90% */
+  }
+  .project-main {
+    transform: scale(0.9); /* Scale down to 90% */
+  }
+}
+
+/* Further scale down at smaller screen sizes */
+@media (max-width: 600px) {
+  .home-resize, .about-resize, .contact-resize, .project-resize {
+    transform: scale(0.8); /* Scale down to 80% */
+  }
+  .project-main {
+    transform: scale(0.8); /* Scale down to 80% */
+  }
 }
 
 .left {
   flex: 1;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin-left: 0;
-  transition: margin-left 0.5s ease, transform 0.5s ease;
+  max-width: 800px;        /* Set a maximum width for the left section */
+  width: 80%;              /* Adjust the initial width */
+  padding: 20px;
+  text-align: center;      /* Center text content */
+  transition: all 0.5s ease; /* Smooth transition for all changes */
+}
+
+.main-name {
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-family: Andale Mono, monospace;
+  text-shadow: 0 15px 15px rgba(0, 0, 0, .16);
 }
 
 .right {
-  margin-left: 20px;
-  padding: 50px;
-  position: absolute;
-  right: 0;
+  position: fixed;
   top: 0;
+  right: 0;
   bottom: 0;
-  min-width: 650px;
-  background-size: auto 100%;
-  max-height: 600px;
-  height: 85%;
+  width: 100%; /* Set width for how much of the right side should be covered */
   background-image: url('./images/background.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 1;
-  z-index: 2;
-  transition: opacity 0.5s ease;
+  background-size: cover;
+  background-repeat: no-repeat; /* Prevent tiling/repeating of the image */
+  z-index: -1;
+  opacity: .1;
+  transition: opacity 0.5s ease, z-index 0.5s ease; /* Smooth transition for opacity and z-index */
 }
 
-@media (max-width: 1171px) {
-  .right {
-    opacity: 0.1;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .left {
-    margin-left: 0;
-    transform: translateX(-10%); 
+    margin-bottom: 25rem; 
   }
 }
 
@@ -171,22 +184,6 @@ html {
   text-transform: uppercase;
 }
 
-.name-container {
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
-  background: none;
-  background-color: transparent;
-  
-}
-
-.name-container span {
-  font-size: 4rem;
-  text-transform: capitalize;
-  font-family: Andale Mono, monospace;
-  text-shadow: 0 15px 15px rgba(0, 0, 0, .16);
-}
-
 .paragraph {
   color: #756c6c;
 }
@@ -275,12 +272,16 @@ body.modal-open {
 
 .contact-main {
   display: flex;
-  flex-direction: row;
-  color: #756c6c;
+  flex-direction: row; /* Keep items in a row on larger screens */
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  min-width: 20rem;
+  padding: 20px;
+  width: 100%; /* Make sure the contact section takes the full width */
+  max-width: 1200px; /* Optional: Set a max width */
+  box-sizing: border-box;
+  justify-content: flex-start; /* Aligns the content to the left */
+  min-width: 400px;
 }
 
 .contact-form {
@@ -366,14 +367,14 @@ body.modal-open {
 .social-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center; /* Horizontally center the social links */
+  align-items: center; /* Vertically align the items */
+  gap: 20px; /* Add some space between each link */
 }
 
 .social-links div {
-  width: 44%; /* Ensures 2 items fit per row */
-  text-align: center;
-  margin-left: 20px;
+  text-align: center; /* Center the text and images inside each div */
+  flex: 1 1 auto; /* Allow the divs to take up their natural width */
 }
 
 .social-links img {
@@ -381,41 +382,97 @@ body.modal-open {
   width: 50px;
 }
 
-@media (max-width: 500px) {
-  .social-links p {
-    display: none;
+@media (max-width: 600px) {
+  .social-links {
+    flex-direction: column; /* Stack the social links vertically */
   }
 }
 
 .project-main {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  border-radius: 12px;
-  border-style: groove;
-  border-color: #fcb69f;
-  max-height: 450px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  background: linear-gradient(62deg, #ffecd2, #fcb69f);
+  justify-content: space-evenly;
+  gap: 20px; /* Space between the project containers */
+  align-items: stretch; /* Ensures all children have the same height */
 }
 
-.project-main div {
-  border-radius: 12px;
-  border-style: inset;
-  border-color: #fcb69f;
-  margin: 15px;
-  width: 250px;
-  height: 350px;
-  background: radial-gradient(#F7CE68, #FBAB7E);
-}
-
-.project-heading {
-  font-family: Pirata One, sans-serif;
-  font-size: 30px;
-  text-wrap: wrap;
-  text-decoration: underline;
-  margin-top: 5px;
+.project-container {
+  flex: 1 1 45%; /* Take up 45% of the container width */
+  max-width: 500px; /* Optional: Set a maximum width */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; /* Arrange the content inside vertically */
+  justify-content: space-between; /* Distribute space between the content */
+  min-height: 300px; /* Ensures that all containers are at least 300px tall */
+  min-width: 500px;
+  box-sizing: border-box; /* Ensures padding is included in the element's size */
+  align-items: center;
   text-align: center;
+}
+
+.project-container:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+  transform: translate(5px, -5px); /* Moves 5px right and 5px up diagonally */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.project-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color from the parent */
+  max-width: 500px;
+}
+
+.project-container h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.project p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Tech used section with flexbox */
+.tech-used {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Adds space between the tech tags */
+  margin-top: 10px;
+}
+
+/* Styling for each tech tag */
+.tech-tag {
+  color:white;
+  background-color: #756c6c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .project-main {
+    flex: 1 1 100%; /* On small screens, each project will take up 100% width */
+  }
+}
+
+.footer {
+  background-color: #e0e0e0;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%; /* Ensure the footer spans the width minus the margins */
+}
+
+.footer p {
+  margin: 0;
+  font-family: Andale Mono, monospace;
+  font-size: 0.9rem;
 }
 
 .primary-c {
@@ -450,6 +507,10 @@ body.modal-open {
   margin-bottom: 3rem;
 }
 
+.mb-ll {
+  margin-bottom: 25rem;
+}
+
 .ml-s {
   margin-left: 5rem;
 }
@@ -458,12 +519,16 @@ body.modal-open {
   margin-left: 3rem;
 }
 
+.mr-ss {
+  margin-right: 2rem;
+}
+
 .mr-s {
   margin-right: 5rem;
 }
 
-.mr-ss {
-  margin-right: 2rem;
+.mr-l {
+  margin-right: 10rem;
 }
 
 .font-s {
