@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/alan_wang/static/css/main.073c9b0a.css",
-    "main.js": "/alan_wang/static/js/main.5805752f.js",
-    "static/js/787.28cb0dcd.chunk.js": "/alan_wang/static/js/787.28cb0dcd.chunk.js",
-    "static/media/logo.svg": "/alan_wang/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/alan_wang/static/css/main.85d287bf.css",
+    "main.js": "/alan_wang/static/js/main.2780c36f.js",
+    "static/js/453.150cd915.chunk.js": "/alan_wang/static/js/453.150cd915.chunk.js",
+    "static/media/email-logo.png": "/alan_wang/static/media/email-logo.934ec81f836bd87f6f04.png",
+    "static/media/instagram-logo.png": "/alan_wang/static/media/instagram-logo.01c1ecea89133068fe3a.png",
+    "static/media/github-logo.png": "/alan_wang/static/media/github-logo.1618f1ca375b7692246d.png",
+    "static/media/linkedin-logo.png": "/alan_wang/static/media/linkedin-logo.625a17a1d47a162b8d8b.png",
+    "static/media/resume.pdf": "/alan_wang/static/media/resume.6243edde1094f2828986.pdf",
+    "static/media/background.png": "/alan_wang/static/media/background.ae5e9183a96f2e142c66.png",
+    "static/media/RIT-tiger.jpg": "/alan_wang/static/media/RIT-tiger.3e9f172506de63d2cee6.jpg",
     "index.html": "/alan_wang/index.html",
-    "main.073c9b0a.css.map": "/alan_wang/static/css/main.073c9b0a.css.map",
-    "main.5805752f.js.map": "/alan_wang/static/js/main.5805752f.js.map",
-    "787.28cb0dcd.chunk.js.map": "/alan_wang/static/js/787.28cb0dcd.chunk.js.map"
+    "main.85d287bf.css.map": "/alan_wang/static/css/main.85d287bf.css.map",
+    "main.2780c36f.js.map": "/alan_wang/static/js/main.2780c36f.js.map",
+    "453.150cd915.chunk.js.map": "/alan_wang/static/js/453.150cd915.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5805752f.js"
+    "static/css/main.85d287bf.css",
+    "static/js/main.2780c36f.js"
   ]
 }
