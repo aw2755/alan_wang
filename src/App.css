@@ -14,56 +14,35 @@ html {
   min-height: 100vh;
 }
 
-/* Scale down the project section once the screen width is below 800px */
-@media (max-width: 800px) {
-  .home-resize, .about-resize, .contact-resize, .project-resize {
-    transform: scale(0.9); /* Scale down to 90% */
-  }
-  .project-main {
-    transform: scale(0.9); /* Scale down to 90% */
-  }
-}
-
-/* Further scale down at smaller screen sizes */
-@media (max-width: 600px) {
-  .home-resize, .about-resize, .contact-resize, .project-resize {
-    transform: scale(0.8); /* Scale down to 80% */
-  }
-  .project-main {
-    transform: scale(0.8); /* Scale down to 80% */
-  }
+.intro {
+  margin-top: 10rem;
 }
 
 .left {
   flex: 1;
-  max-width: 800px;        /* Set a maximum width for the left section */
-  width: 80%;              /* Adjust the initial width */
-  padding: 20px;
+  max-width: 800px;        /* stays more on the left */
   text-align: center;      /* Center text content */
   transition: all 0.5s ease; /* Smooth transition for all changes */
 }
 
 .main-name {
   font-size: 5rem;
-  text-transform: capitalize;
   font-family: Andale Mono, monospace;
-  text-shadow: 0 15px 15px rgba(0, 0, 0, .16);
+  text-shadow: 0 15px 15px rgba(0, 0, 0, .2);
 }
 
 .right {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 0;     /* top and bottom help keeps it covering the whole page vertically*/
   bottom: 0;
-  width: 100%; /* Set width for how much of the right side should be covered */
+  width: 100%; /* Set width to cover the whole page horizontally */
   background-image: url('./images/background.png');
-  background-size: cover;
-  background-repeat: no-repeat; /* Prevent tiling/repeating of the image */
   z-index: -1;
   opacity: .1;
-  transition: opacity 0.5s ease, z-index 0.5s ease; /* Smooth transition for opacity and z-index */
 }
 
+/* this is to make more white space after the name so you can only see the name
+   at first on smaller screens */
 @media (max-width: 800px) {
   .left {
     margin-bottom: 25rem; 
@@ -71,14 +50,12 @@ html {
 }
 
 .nav-container {
-  background: none;
   border-radius: 50%;
   background-color: #ef9218;
-  border: none; 
-  display: flex; 
+  display: flex;  /* helps keep the triangle in the middle*/
   align-items: center;
   justify-content: center; 
-  position: fixed;
+  position: fixed;  /* keep the nav button top right */
   right: 2rem;
   top: 1.5rem;
   width: 3.3rem;
@@ -91,6 +68,7 @@ html {
   background-color: #FFDB00;
 }
 
+/* this is for the triangle image in nav button */
 #_nav-icon {
   max-width: 100%;
   max-height: 100%;
@@ -100,6 +78,8 @@ html {
   transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
+/* this is to hide the triangle background since the image is originally a square surrounding
+   the triangle so it just hides it */
 .dropdown-trigger {
   background: none; 
   border: none; 
@@ -110,8 +90,7 @@ html {
 }
 
 .dropdown-trigger:hover #_nav-icon {
-  transform: rotate(180deg); /* Example of rotation effect */
-  opacity: 0.9; /* Example of opacity effect */
+  transform: rotate(180deg); 
 }
 
 .dropdown-content {
@@ -119,27 +98,25 @@ html {
   top: 60px;
   left: -75px;
   z-index: 10;
-  opacity: 0;
-  transform: translateY(-10px);
-  visibility: hidden;
+  transform: translateY(-10px); /* used for little sliding down animation */
+  visibility: hidden; /* hides the dropdown initially*/
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .dropdown-content.show {
-  opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
 
 .dropdown-content a {
   padding: 10px 15px;
-  text-decoration: none;
+  text-decoration: none; /* removed the underline for <a> tag */
   color: #333;
+  font-family: Andale Mono, monospace;;
   border-radius: 8px;
   margin: 5px 0;
   transition: background-color 0.3s, color 0.3s;
   display: block;
-  opacity: 1;
 }
 
 .dropdown-content a:hover {
@@ -157,7 +134,7 @@ html {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
-/* Create the triangle */
+/* Creates the triangle tip */
 .speech-bubble::after {
   content: '';
   position: absolute;
@@ -169,33 +146,12 @@ html {
   border-color: transparent transparent #fff transparent;
 }
 
-.intro {
-  margin-top: 10rem;
-}
-
-.heading-5 {
-  font-size: .7rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.heading-4 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
-
-.paragraph {
-  color: #756c6c;
-}
-
 .resume-button {
   padding: .8rem 3rem;
   border: none;
   border-radius: 10rem;
   background-color: #ef9218;
   font-family: Andale Mono, monospace;
-  font-style: bold;
-  font-size: .8rem;
   text-transform: uppercase;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0 15px 15px rgba(0, 0, 0, .16);
@@ -204,248 +160,71 @@ html {
 .resume-button:hover {
   background-color: #FFDB00;
 }
-
-.popup {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.resume-iframe {
-  width: 80%;
-  height: 95%;
-  border: none;
-  scroll-behavior: smooth;
-}
-
-body.modal-open {
-  overflow: hidden;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
+                                            /* ABOUT */
+.about-section {
+  margin-right: 90px;
 }
 
 .about-me {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  height: auto;
+  display: flex;  
 }
 
 .about-me-p{
   display: flex;
   flex-direction: column;
   font-family: Andale Mono, monospace !important;
-  z-index: 2;
-  min-width: 16rem;
-  max-width: 45rem;
+  min-width: 200px;
 }
 
-.about-img {
-  position: absolute;
-  height: 100%;
-  right: 3%;
-  z-index: 1;
-  background-size: auto 100%;
-}
-
-@media (max-width: 1200px) {
-  .about-img {
-    opacity: 0.1;
-  }
-}
-
-.contact-main {
-  display: flex;
-  flex-direction: row; /* Keep items in a row on larger screens */
-  background-color: #f9f9f9;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  width: 100%; /* Make sure the contact section takes the full width */
-  max-width: 1200px; /* Optional: Set a max width */
-  box-sizing: border-box;
-  justify-content: flex-start; /* Aligns the content to the left */
-  min-width: 400px;
-}
-
-.contact-form {
-  width: 55%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input:focus, 
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #ef9218;
-}
-
-.contact-form div {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form input {
-  height: 23px;
-}
-
-.contact-form textarea {
-  height: 150px;
-  resize: none;
-}
-
-.submit-button {
-  padding: 10px 10px;
-  width: 80%;
-  align-self: center;
-  background-color: #ef9218;
-  color: white;
-  border: none;
-  border-radius: 10rem;
-  font-family: Andale Mono, monospace;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-  background-color: #FFDB00;
-}
-
-.popup-message {
-  position: fixed;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -90%);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  background-color: #ef9218;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.popup-content {
-  position: relative;
-  text-align: center;
-}
-
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.popup-message p {
-  margin: 0;
-  font-size: 16px;
-}
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Horizontally center the social links */
-  align-items: center; /* Vertically align the items */
-  gap: 20px; /* Add some space between each link */
-}
-
-.social-links div {
-  text-align: center; /* Center the text and images inside each div */
-  flex: 1 1 auto; /* Allow the divs to take up their natural width */
-}
-
-.social-links img {
-  height: 50px;
-  width: 50px;
-}
-
-@media (max-width: 600px) {
-  .social-links {
-    flex-direction: column; /* Stack the social links vertically */
-  }
-}
-
+                                              /* PROJECTS */
 .project-main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 20px; /* Space between the project containers */
-  align-items: stretch; /* Ensures all children have the same height */
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .project-container {
-  flex: 1 1 45%; /* Take up 45% of the container width */
-  max-width: 500px; /* Optional: Set a maximum width */
+  width: 100%;
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
-  flex-direction: column; /* Arrange the content inside vertically */
-  justify-content: space-between; /* Distribute space between the content */
-  min-height: 300px; /* Ensures that all containers are at least 300px tall */
-  min-width: 500px;
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box; /* Ensures padding is included in the element's size */
-  align-items: center;
   text-align: center;
+  gap: 20px;
 }
 
 .project-container:hover {
-  background-color: #e0e0e0; /* Darker background on hover */
+  background-color: #e0e0e0;
   transform: translate(5px, -5px); /* Moves 5px right and 5px up diagonally */
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project-link {
   text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit text color from the parent */
-  max-width: 500px;
+  color: inherit;
 }
 
 .project-container h5 {
   font-size: 1.5rem;
-  margin-bottom: 15px;
 }
 
 .project p {
   font-size: 1rem;
-  margin-bottom: 15px;
 }
 
-/* Tech used section with flexbox */
 .tech-used {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Adds space between the tech tags */
-  margin-top: 10px;
+  gap: 10px;
 }
 
-/* Styling for each tech tag */
 .tech-tag {
   color:white;
   background-color: #756c6c;
@@ -454,25 +233,46 @@ body.modal-open {
   font-size: 0.9rem;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .project-main {
-    flex: 1 1 100%; /* On small screens, each project will take up 100% width */
-  }
-}
-
+                                                  /* FOOTER */
 .footer {
   background-color: #e0e0e0;
   color: black;
   text-align: center;
   padding: 20px 0;
   width: 100%; /* Ensure the footer spans the width minus the margins */
-}
-
-.footer p {
-  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Vertically align the items */
+  white-space: nowrap;
   font-family: Andale Mono, monospace;
   font-size: 0.9rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+  .footer a {
+    margin: 0 5px;
+  }
+}
+
+/* commonly used */
+.heading-5 {
+  font-size: .9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 .primary-c {
@@ -524,7 +324,7 @@ body.modal-open {
 }
 
 .mr-s {
-  margin-right: 5rem;
+  margin-right: 4rem;
 }
 
 .mr-l {
