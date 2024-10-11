@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/alan_wang/static/css/main.85d287bf.css",
-    "main.js": "/alan_wang/static/js/main.2780c36f.js",
-    "static/js/453.150cd915.chunk.js": "/alan_wang/static/js/453.150cd915.chunk.js",
-    "static/media/email-logo.png": "/alan_wang/static/media/email-logo.934ec81f836bd87f6f04.png",
-    "static/media/instagram-logo.png": "/alan_wang/static/media/instagram-logo.01c1ecea89133068fe3a.png",
-    "static/media/github-logo.png": "/alan_wang/static/media/github-logo.1618f1ca375b7692246d.png",
-    "static/media/linkedin-logo.png": "/alan_wang/static/media/linkedin-logo.625a17a1d47a162b8d8b.png",
-    "static/media/resume.pdf": "/alan_wang/static/media/resume.6243edde1094f2828986.pdf",
+    "main.css": "/alan_wang/static/css/main.7ffe6e6d.css",
+    "main.js": "/alan_wang/static/js/main.6306835a.js",
+    "static/media/Alan_Wang_Resume.pdf": "/alan_wang/static/media/Alan_Wang_Resume.175783a240ff0d573de5.pdf",
     "static/media/background.png": "/alan_wang/static/media/background.ae5e9183a96f2e142c66.png",
-    "static/media/RIT-tiger.jpg": "/alan_wang/static/media/RIT-tiger.3e9f172506de63d2cee6.jpg",
     "index.html": "/alan_wang/index.html",
-    "main.85d287bf.css.map": "/alan_wang/static/css/main.85d287bf.css.map",
-    "main.2780c36f.js.map": "/alan_wang/static/js/main.2780c36f.js.map",
-    "453.150cd915.chunk.js.map": "/alan_wang/static/js/453.150cd915.chunk.js.map"
+    "main.7ffe6e6d.css.map": "/alan_wang/static/css/main.7ffe6e6d.css.map",
+    "main.6306835a.js.map": "/alan_wang/static/js/main.6306835a.js.map"
   },
   "entrypoints": [
-    "static/css/main.85d287bf.css",
-    "static/js/main.2780c36f.js"
+    "static/css/main.7ffe6e6d.css",
+    "static/js/main.6306835a.js"
   ]
 }
