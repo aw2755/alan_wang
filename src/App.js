@@ -78,7 +78,7 @@ function App() {
 
                     {/* view resume button */}
                     <div>
-                        <a href={RESUME} download="Alan_Wang_Resume.pdf">
+                        <a className='resume-a' href={RESUME} download="Alan_Wang_Resume.pdf">
                             <button className="resume-button mt-s">Download Resume</button>
                         </a>
                     </div>

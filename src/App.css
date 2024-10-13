@@ -188,6 +188,11 @@ a:visited, a:link {
   box-shadow: 0 15px 15px rgba(0, 0, 0, .16);
 }
 
+.resume-a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .resume-button:hover {
   background-color: #FFDB00;
 }
