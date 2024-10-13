@@ -89,7 +89,7 @@ function App() {
             {/* the background pic */}
             <div className='right'></div> 
 
-            <div id='about' className='about-section mt-ll mb-l ml-s'> {/* start about div */}
+            <div id='about' className='about-section mt-ll mb-l ml-ss'> {/* start about div */}
                 <h5 className='heading-4 sec-color'>About Me —</h5>
 
                 <div className='about-me mt-s'> {/* start about paragraph div */}
@@ -110,7 +110,7 @@ function App() {
                 </div> {/* end about me div */}
 
             </div>
-            <div id='project' className='sec-color mt-s mr-s ml-s'> {/* start project div*/}
+            <div id='project' className='sec-color mt-s mr-s ml-ss'> {/* start project div*/}
                 <section>
                     <h5 className='heading-4'>My Projects —</h5>
                 </section>
