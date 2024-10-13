@@ -101,20 +101,9 @@ function App() {
                                   backend functionalities that power smooth user experiences.
                         </p>
                         <p>
-                            <br/> Based in Brooklyn, New York, I’m always looking for new challenges that push
-                                  the boundaries of technology. My journey into software development started with a
-                                  simple love for problem-solving, and it’s led me to explore the fascinating world of 
-                                  full-stack development. <br/>
-                        </p>
-                        <p>
                             <br/> Outside of tech, I am a badminton enthusiast 🏸. Whenever I’m not coding, 
                                   you’ll likely find me on the court. I also value spending time with friends, 
                                   being surrounded by people I care about is something I’ll always cherish. <br/>
-                        </p>
-
-                        <p>
-                            <br/> I’m always eager to learn and adapt to new technologies, continuously refining 
-                                  my skills to stay at the forefront of web development.
                         </p>
                     </div> {/* end about paragraph div */}
 
@@ -190,14 +179,16 @@ function App() {
 
                 </div>
             </div> {/* end project div*/}
-
-            <footer class="footer mt-l">
-                <p> PORTFOLIO BY - Alan Wang |
-                    <a href="https://www.linkedin.com/in/wang-alan/" target='_blank' rel="noreferrer"> LinkedIn </a> |
-                    <a href='https://github.com/aw2755' target='_blank' rel="noreferrer"> Github </a> |
-                    <a href="mailto:alanwang07012002@gmail.com?subject=Portfolio Inquiry" target='_blank' rel="noreferrer"> Email </a> |
-                </p>
-            </footer>
+            
+            <div> {/* start footer div*/}
+                <footer class="footer mt-l">
+                    <p> PORTFOLIO BY - Alan Wang |
+                        <a href="https://www.linkedin.com/in/wang-alan/" target='_blank' rel="noreferrer"> LinkedIn </a> |
+                        <a href='https://github.com/aw2755' target='_blank' rel="noreferrer"> Github </a> |
+                        <a href="mailto:alanwang07012002@gmail.com?subject=Portfolio Inquiry" target='_blank' rel="noreferrer"> Email </a> |
+                    </p>
+                </footer>
+            </div> {/* end footer div*/}
 
         </div> // end div for app 
   ); // end return
