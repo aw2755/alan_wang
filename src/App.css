@@ -8,6 +8,15 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+a:visited, a:link {
+  color: inherit;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -241,12 +250,14 @@ html {
   padding: 20px 0;
   width: 100%; /* Ensure the footer spans the width minus the margins */
   display: flex;
-  justify-content: center; /* Center the content */
-  align-items: center; /* Vertically align the items */
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   font-family: Andale Mono, monospace;
   font-size: 0.9rem;
+  box-sizing: border-box;
 }
+
 
 .footer a {
   text-decoration: none;
