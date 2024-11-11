@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
-import RESUME from './Alan_Wang_Resume.pdf';
+import RESUME from './Alan_Resume.pdf';
 import LEFT_ARROW from './images/left-triangle-icon.png';
 import DOWN_ARROW from './images/down-triangle-icon.png';
 // import LINKEDIN_LOGO from './images/linkedin-logo.png';
@@ -116,6 +116,22 @@ function App() {
                 </section>
 
                 <div className='project-main mt-l main-font'>
+                    <a href='https://github.com/aw2755/inventory_manager' target='_blank' rel="noreferrer" className='project-link'>
+                        <div className='project-container'>
+                            <h5 className='upper-c'>Inventory Manager</h5>
+                            <p>An Inventory Management Web Application designed to streamline the tracking, organization, 
+                                and control of inventory across multiple locations. This application empowers businesses 
+                                to efficiently manage their stocks and ensure accurate record-keeping in real time.</p>
+                            <section class='tech-used'>
+                                <span className='tech-tag'>React</span>
+                                <span className='tech-tag'>TailwindCSS</span>
+                                <span className='tech-tag'>Node.js</span>
+                                <span className='tech-tag'>Next.js</span>
+                                <span className='tech-tag'>PostgreSQL</span>
+                                <span className='tech-tag'>AWS</span>
+                            </section>
+                        </div>
+                    </a>
                     <a href='https://github.com/aw2755/alan_wang' target='_blank' rel="noreferrer" className='project-link'>
                         <div className='project-container'>
                             <h5 className='upper-c'>Portfolio</h5>
@@ -123,8 +139,9 @@ function App() {
                                 creativity across various development areas. It offers an in-depth look into the work 
                                 I’m passionate about and the tools I’ve used to create them.</p>
                             <section class='tech-used'>
-                                <span className='tech-tag'>React.js</span>
+                                <span className='tech-tag'>React</span>
                                 <span className='tech-tag'>Css</span>
+                                <span className='tech-tag'>HTML</span>
                             </section>
                         </div>
                     </a>
