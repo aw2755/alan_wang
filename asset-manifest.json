@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/alan_wang/static/css/main.4e4ea28d.css",
-    "main.js": "/alan_wang/static/js/main.85c49a16.js",
+    "main.js": "/alan_wang/static/js/main.a6d73cae.js",
     "static/media/Alan_Resume.pdf": "/alan_wang/static/media/Alan_Resume.bcb61127b6dd38abb203.pdf",
     "static/media/background.png": "/alan_wang/static/media/background.ae5e9183a96f2e142c66.png",
     "index.html": "/alan_wang/index.html",
     "main.4e4ea28d.css.map": "/alan_wang/static/css/main.4e4ea28d.css.map",
-    "main.85c49a16.js.map": "/alan_wang/static/js/main.85c49a16.js.map"
+    "main.a6d73cae.js.map": "/alan_wang/static/js/main.a6d73cae.js.map"
   },
   "entrypoints": [
     "static/css/main.4e4ea28d.css",
-    "static/js/main.85c49a16.js"
+    "static/js/main.a6d73cae.js"
   ]
 }
