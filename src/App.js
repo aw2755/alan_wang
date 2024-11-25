@@ -116,6 +116,23 @@ function App() {
                 </section>
 
                 <div className='project-main mt-l main-font'>
+                <a href='https://github.com/blin4504/rate-course' target='_blank' rel="noreferrer" className='project-link'>
+                        <div className='project-container'>
+                            <h5 className='upper-c'>Rate-My-Course</h5>
+                            <p>This platform allows students to rate and review their courses, providing valuable insights into 
+                                course quality, difficulty, and instructor effectiveness. By aggregating student feedback, it 
+                                empowers users to make informed decisions about which courses align best with their academic 
+                                goals and preferences.</p>
+                            <section class='tech-used'>
+                                <span className='tech-tag'>Vue</span>
+                                <span className='tech-tag'>JavaScript</span>
+                                <span className='tech-tag'>Node.js</span>
+                                <span className='tech-tag'>PostgreSQL</span>
+                                <span className='tech-tag'>TailwindCSS</span>
+                                <span className='tech-tag'>HTML</span>
+                            </section>
+                        </div>
+                    </a>
                     <a href='https://github.com/aw2755/inventory_manager' target='_blank' rel="noreferrer" className='project-link'>
                         <div className='project-container'>
                             <h5 className='upper-c'>Inventory Manager</h5>
@@ -124,10 +141,11 @@ function App() {
                                 to efficiently manage their stocks and ensure accurate record-keeping in real time.</p>
                             <section class='tech-used'>
                                 <span className='tech-tag'>React</span>
-                                <span className='tech-tag'>TailwindCSS</span>
+                                <span className='tech-tag'>JavaScript</span>
                                 <span className='tech-tag'>Node.js</span>
                                 <span className='tech-tag'>Next.js</span>
                                 <span className='tech-tag'>PostgreSQL</span>
+                                <span className='tech-tag'>TailwindCSS</span>
                                 <span className='tech-tag'>AWS</span>
                             </section>
                         </div>
