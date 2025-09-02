@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/alan_wang/static/css/main.4e4ea28d.css",
-    "main.js": "/alan_wang/static/js/main.51e19b02.js",
-    "static/media/Alan_Resume.pdf": "/alan_wang/static/media/Alan_Resume.cf42b14b20a183c3ca74.pdf",
-    "static/media/background.png": "/alan_wang/static/media/background.ae5e9183a96f2e142c66.png",
+    "main.css": "/alan_wang/static/css/main.15a64d66.css",
+    "main.js": "/alan_wang/static/js/main.973c4b4b.js",
+    "static/media/Alan_Resume.pdf": "/alan_wang/static/media/Alan_Resume.77bb88208d8f2a686879.pdf",
     "index.html": "/alan_wang/index.html",
-    "main.4e4ea28d.css.map": "/alan_wang/static/css/main.4e4ea28d.css.map",
-    "main.51e19b02.js.map": "/alan_wang/static/js/main.51e19b02.js.map"
+    "main.15a64d66.css.map": "/alan_wang/static/css/main.15a64d66.css.map",
+    "main.973c4b4b.js.map": "/alan_wang/static/js/main.973c4b4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e4ea28d.css",
-    "static/js/main.51e19b02.js"
+    "static/css/main.15a64d66.css",
+    "static/js/main.973c4b4b.js"
   ]
 }
